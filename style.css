@@ -14,61 +14,68 @@ body {
 }
 
 .main {
-    /* justify-content: center;
-    align-items: center; */
-    /* display: flex; */
-    width: 80%;
+    width: 70%;
     margin: 100px;
-    /* border: 1px solid red; */
-    height: 80vh;
+    background-color: white;
+    height: 75vh;
 }
 
 #quotes {
     position: relative;
-    bottom: 100px;
+    bottom: 110px;
     left: 150px;
     width: 80px;
 }
 
-
 #pattern-bg {
     position: relative;
-    top: 0px;
+    bottom: -20px;
     right: 50px;
-    width: 450px;
+    width: 430px;
 }
 
-.slide-one p {
-    position: relative;
-    bottom: 300px;
-    left: 100px;
-    width: 38%;
-
+.slide-one {
+    width: 43%;
 }
 
 .test-text {
     font-weight: 300;
     font-size: 20px;
+    position: relative;
+    bottom: 300px;
+    left: 100px;
+
 }
 
 .author{
     position: relative;
-    bottom: 30px;
+    bottom: 270px;
     left: 100px;
+    font-weight: 700;
+    font-size: 16px;
 }
 
 #pattern-curve {
     position: relative;
-    top: 200px;
-    right: 70px;
+    top: 220px;
+    right: 80px;
     width: 400px;
 }
 
-#tanya {
-    width: 350px;
+.slide-image {
+    box-shadow: 25px 0px rgba(109, 60, 109, 0.070);
+    width: 335px;
     position: relative;
     left: 500px;
-    bottom: 600px;
+    bottom: 556px;
+}
+#tanya {
+    width: 335px;
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+    border-radius: 5px;
+    z-index: 1;
 }
 
 .attribution {
