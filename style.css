@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* view on mobile */
 @media (min-width: 375px) {
    
@@ -11,78 +17,69 @@
 body {
     color: hsl(240, 38%, 20%);
     font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
 }
 
-.main {
-    width: 70%;
-    margin: 100px;
-    background-color: white;
-    height: 75vh;
+.container {
+    height: 80vh;
 }
 
-#quotes {
-    position: relative;
-    bottom: 110px;
+/* Background */
+.pattern-bg {
+    width: 520px;
+    position: absolute;
+    left: 650px;
+    top: 100px;
+}
+
+.quotes {
+    position: absolute;
+    width: 100px;
+    left: 250px;
+    top: 195px;
+}
+
+.pattern-curve {
+    position: absolute;
+    top: 550px;
+    right: 800px;
+}
+/* Slide */
+.slide {
+    background-color: red;
+    border-radius: 30%;
+    width: 70px;
+}
+
+/* Slide-page */
+.text {
+    position: absolute;
+    width: 600px;
     left: 150px;
-    width: 80px;
-}
-
-#pattern-bg {
-    position: relative;
-    bottom: -20px;
-    right: 50px;
-    width: 430px;
-}
-
-.slide-one {
-    width: 43%;
-}
-
-.test-text {
-    font-weight: 300;
-    font-size: 20px;
-    position: relative;
-    bottom: 300px;
-    left: 100px;
-
-}
-
-.author{
-    position: relative;
-    bottom: 270px;
-    left: 100px;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-#pattern-curve {
-    position: relative;
-    top: 220px;
-    right: 80px;
-    width: 400px;
-}
-
-.slide-image {
-    box-shadow: 25px 0px rgba(109, 60, 109, 0.070);
-    width: 335px;
-    position: relative;
-    left: 500px;
-    bottom: 556px;
-}
-#tanya {
-    width: 335px;
-    position: relative;
-    left: 10px;
-    bottom: 5px;
-    border-radius: 5px;
+    top: 250px;
     z-index: 1;
 }
 
-.attribution {
-    font-size: 11px; 
-    text-align: center;
+.author {
+    font-weight: 700;
+    position: absolute;
+    font-size: 16px;
+    left: 150px;
+    top: 468px;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.title {
+    font-weight: 500;
+}
+
+.tanya {
+    position: absolute;
+    width: 400px;
+    top: 148px;
+    left: 700px;
+    border-radius: 2%;
 }
