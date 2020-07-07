@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* view on mobile */
@@ -48,18 +48,55 @@ body {
     top: 550px;
     right: 800px;
 }
-/* Slide */
-.slide {
-    background-color: red;
-    border-radius: 30%;
-    width: 70px;
+
+/* Slide Buttons*/
+.prev {
+    background: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 53px;
+    height: 48px;
+    margin: -7px;
+    border-radius: 42% 0% 0% 42%;
+}
+
+.prev:hover {
+    background: hsl(240, 38%, 20%);
+}
+
+.next {
+    background: white;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 50px;
+    margin: -6px;
+    height: 48px;
+    border-radius: 0% 42% 42% 0%;
+}
+
+.next:hover {
+    background: hsl(240, 38%, 20%);
+}
+
+.button {
+    position: relative;
+    z-index: 1;
+    top: 530px;
+    left: 112px;
 }
 
 /* Slide-page */
+.slide {
+    display: flex;
+}
+
 .text {
     position: absolute;
-    width: 600px;
-    left: 150px;
+    font-weight: 300;
+    width: 640px;
+    left: 140px;
     top: 250px;
     z-index: 1;
 }
@@ -68,18 +105,41 @@ body {
     font-weight: 700;
     position: absolute;
     font-size: 16px;
-    left: 150px;
-    top: 468px;
+    left: 140px;
+    top: 470px;
 }
 
 .title {
-    font-weight: 500;
+    font-weight: 300;
+    color: transparent;
+    text-shadow: 0 0 3px #000;
 }
 
-.tanya {
+.image {
     position: absolute;
     width: 400px;
     top: 148px;
     left: 700px;
     border-radius: 2%;
+    box-shadow: 0px 0px 40px 0px hsl(240, 18%, 77%);
+}
+
+.current {
+    opacity: 0;
+}
+
+.slide.current {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
