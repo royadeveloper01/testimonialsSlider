@@ -1,28 +1,47 @@
-let slides  = document.getElementsByClassName("showSlides");
-let left = document.getElementsByClassName("left");
-let right = document.getElementsByClassName("right");
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+const auto = false;
+const intervalTime = 5000;
+let slideInterval;
 
-const displaySlides = (n) => {
-    var i;
-    if(n > slides.length){
-        slide_index = 1
+const nextSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for next slide
+    if(current.nextElementSibling) {
+        // Add current to next sibling
+        current.nextElementSibling.classList.add('current');
+    } else {
+        // Add current to start
+        slides[0].classList.add('current');
     }
-    if(n < 1){
-        slide_index = slides.length
+    setTimeout(() => current.classList.remove('current'));
+};
+
+const prevSlide = () => {
+    // Get current class
+    const current = document.querySelector('.current');
+    // Remove current class
+    current.classList.remove('current');
+    // Check for prev slide
+    if(current.previousElementSibling) {
+        // Add current to prev sibling
+        current.previousElementSibling.classList.add('current');
+    } else {
+        // Add current to last
+        slides[slides.length -1].classList.add('current');
     }
+    setTimeout(() => current.classList.remove('current'));
+};
 
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none"
-    }
-    slides[slide_index -1].style.display = 'block';
-}
+// Button events
+next.addEventListener('click', () => {
+    console.log('click');
+});
 
-var slide_index = 1;
-displaySlides(slide_index);
-
-const nextSlide = (n) => {
-    displaySlides(slide_index += n);
-} 
-
-left.addEventListener("click", nextSlide());
-console.log(click)
+prev.addEventListener('click', (e) => {
+    prevSlide();
+});
