@@ -89,7 +89,7 @@ body {
 
 /* Slide-page */
 .slide {
-    display: flex;
+    /* display: flex; */
 }
 
 .text {
@@ -129,13 +129,13 @@ body {
 }
 
 .slide.current {
-    opacity: 1;
-    transform: translateX(600px);
-    transition: all 0.7s ease-in-out 0.3s;
+    transition: all 0.5s ease-out;
 }
 
 /* Footer */
 .attribution { 
+    position: absolute;
+    top: 730px;
     font-size: 11px; 
     text-align: center; 
 }
